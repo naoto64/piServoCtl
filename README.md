@@ -12,7 +12,9 @@ It utilizes hardware PWM. Therefore, the servo motor can be moved smoothly. Sinc
 ````python:example.py
 from Servo import piservo
 import time
+import subprocess
 
+subprocess.call('sudo pigpiod')
 myservo = Servo(12)
 
 myservo.write(180)
