@@ -10,7 +10,7 @@ It utilizes hardware PWM. Therefore, the servo motor can be moved smoothly. Sinc
 ## Demo
 
 ````python:example.py
-from Servo import piservo
+from　piservo import Servo
 import subprocess
 import time
 
