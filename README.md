@@ -53,7 +53,7 @@ Starts control of the servo motor.
 ````python:example.py
 stop()
 ````
-Stops the control of the servo motor.  
+Stops control of the servo motor.  
 
 ## License
 
