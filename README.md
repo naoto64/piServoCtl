@@ -15,6 +15,7 @@ import subprocess
 import time
 
 subprocess.call(['sudo', 'pigpiod'])
+time.sleep(1)
 myservo = Servo(12)
 
 myservo.write(180)
