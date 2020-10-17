@@ -2,7 +2,7 @@
 
 ## Overview
 This is a servo motor control library for Raspberry Pi.
-It utilizes hardware PWM. Therefore, the servo motor can be moved smoothly. Since you are using pigpio, you need to install pigpio and start pigpio. To start pigpio, you need to press the ````sudo pigpiod```` command or make pigpiod start automatically.
+It utilizes hardware PWM. Therefore, the servo motor can be moved smoothly. Since you are using pigpio, you need to install pigpio and start pigpiod. To start pigpiod, you need to press the ````sudo pigpiod```` command or make pigpiod start automatically.
 
 ## Installation
 ````pip install git+https://github.com/naoto64/piservo````
