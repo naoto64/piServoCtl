@@ -33,5 +33,19 @@ min_pulse: Minimum control pulse width of servo motor.
 max_pulse: Maximum control pulse width of servo motor.  
 frequency: PWM frequency of the servo motor.  
 
-
 Create an instance.
+
+````python:example.py
+write(value)
+````
+value: Servo motor drive angle (speed if it is a rotation servo motor).
+
+````python:example.py
+start()
+````
+Starts control of the servo motor.
+
+````python:example.py
+stop()
+````
+Stops the control of the servo motor.
