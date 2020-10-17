@@ -8,11 +8,16 @@ class Servo:
         self.__frequency = frequency
         self.__min_value = min_value
         self.__max_value = max_value
+        self.__value = min_value
         self.start()
     
     def write(self, value):
-        writeValue = (value - self.__min_value) / (self.__max_value - self.__min_value) * (self.__max_pulse - self.__min_pulse) + self.__min_pulse
-        self.__servo.hardware_PWM(self.__gpio, self.__frequency, int(max(min(writeValue, self.__max_pulse), self.__min_pulse) * self.__frequency * 1000))
+        self.__value = value
+        write_value = (value - self.__min_value) / (self.__max_value - self.__min_value) * (self.__max_pulse - self.__min_pulse) + self.__min_pulse
+        self.__servo.hardware_PWM(self.__gpio, self.__frequency, int(max(min(write_value, self.__max_pulse), self.__min_pulse) * self.__frequency * 1000))
+    
+    def read(self, value):
+        return self.__value
     
     def stop(self):
         self.__servo.set_mode(self.__gpio, pigpio.INPUT)
