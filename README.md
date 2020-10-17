@@ -14,7 +14,7 @@ from piservo import Servo
 import subprocess
 import time
 
-subprocess.call('sudo pigpiod')
+subprocess.call(['sudo', 'pigpiod'])
 myservo = Servo(12)
 
 myservo.write(180)
