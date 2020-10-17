@@ -26,3 +26,12 @@ myservo.stop()
 ````python:example.py
 Servo(gpio, min_value=0, max_value=180, min_pulse=0.5, max_pulse=2.4, frequency=50)
 ````
+gpio: The gpio pin number to which the servo motor is connected.
+min_value: Minimum angle of servo motor (speed if it is a rotation servo motor).
+max_value: Maximum angle of servo motor (speed if it is a rotation servo motor).
+min_pulse: Minimum control pulse width of servo motor.
+max_pulse: Maximum control pulse width of servo motor.
+frequency: PWM frequency of the servo motor.
+
+
+Create an instance.
