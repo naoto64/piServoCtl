@@ -43,6 +43,8 @@ write(value)
 ````
 value: Servo motor drive angle (speed if it is a rotation servo motor).  
 
+Drives the servo motor.  
+
 ````python:example.py
 start()
 ````
