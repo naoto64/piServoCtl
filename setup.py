@@ -26,7 +26,7 @@ assert author
 assert author_email
 assert url
 
-with open('README.rst', encoding='utf-8') as f:
+with open('README.md', encoding='utf-8') as f:
     long_description = f.read()
 
 
@@ -47,6 +47,7 @@ setup(
 
     description='This is a servo motor control library for Raspberry Pi.',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     keywords='Servo, Motor, Control, Raspberry Pi',
 
     classifiers=[
