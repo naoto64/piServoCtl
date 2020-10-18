@@ -42,24 +42,24 @@ frequency: PWM frequency of the servo motor.
 Create an instance.  
 
 ````python:example.py
-write(value)
+Servo.write(value)
 ````
 value: Servo motor drive angle (speed if it is a rotation servo motor).  
 
 Drives the servo motor.  
 
 ````python:example.py
-read()
+Servo.read()
 ````
 Read the current value of the servo motor.
 
 ````python:example.py
-start()
+Servo.start()
 ````
 Starts control of the servo motor.  
 
 ````python:example.py
-stop()
+Servo.stop()
 ````
 Stops control of the servo motor.  
 
