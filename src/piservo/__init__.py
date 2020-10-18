@@ -5,6 +5,6 @@ __version__      = '1.0.0'
 __license__      = 'MIT License'
 __author__       = 'naoto64'
 __author_email__ = 'naoto64.2000@gmail.com'
-__url__          = 'https://github.com/naoto64/piservo'
+__url__          = 'https://github.com/naoto64/piServoCtl'
 
 __all__ = ['Servo']
