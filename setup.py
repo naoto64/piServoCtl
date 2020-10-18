@@ -48,7 +48,7 @@ setup(
     description='This is a servo motor control library for Raspberry Pi.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    keywords='Servo, Motor, Control, Raspberry Pi',
+    keywords='Servo Motor PWM Control RaspberryPi',
 
     classifiers=[
         'Development Status :: 5 - Production/Stable',
