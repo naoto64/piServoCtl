@@ -31,7 +31,7 @@ with open('README.md', encoding='utf-8') as f:
 
 
 setup(
-    name=package_name,
+    name="piServoCtl",
     packages=[package_name],
 
     version=version,
