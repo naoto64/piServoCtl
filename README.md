@@ -63,6 +63,30 @@ Servo.stop()
 ````
 Stops control of the servo motor.  
 
+````python:example.py
+Drive(left_gpio, right_gpio, min_value=-100, max_value=100, min_pulse=0.5, max_pulse=2.4, frequency=50)
+````
+left_gpio: GPIO pin number to which the servo motor on the left is connected.  
+right_gpio: GPIO pin number to which the right servo motor is connected.  
+min_value: Minimum speed of servo motor.  
+max_value: Maximum speed of servo motor.  
+min_pulse: Minimum control pulse width of servo motor (millisecond).  
+max_pulse: Maximum control pulse width of servo motor (millisecond).  
+frequency: PWM frequency of the servo motor.  
+
+Create an instance.  
+
+````python:example.py
+Drive.steering(speed=50, direction=0)
+````
+speed: Speed of movement.　　
+direction: Direction of movement.　　
+
+````python:example.py
+Drive.stop()
+````
+Stop moving.　　
+
 ## License
 
 MIT
