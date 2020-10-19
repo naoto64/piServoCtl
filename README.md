@@ -127,6 +127,40 @@ Drive.stop()
 
 Stop moving.  
 
+````python:example.py
+Drive.start()
+````
+
+Start control.  
+
+````python:example.py
+Drive.set_speed(speed)
+````
+
+speed: Speed of movement.  
+
+Moves in the previously specified direction and at the specified speed.  
+
+````python:example.py
+Drive.set_direction(direction)
+````
+
+direction: Direction of movement.  
+
+Moves in the specified direction at the previously specified speed.  
+
+````python:example.py
+Drive.get_speed()
+````
+
+Get the current speed.  
+
+````python:example.py
+Drive.get_direction()
+````
+
+Gets the current direction.  
+
 ## License
 
 MIT
