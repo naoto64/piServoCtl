@@ -88,6 +88,8 @@ Drive.steering(speed=50, direction=0)
 speed: Speed of movement.  
 direction: Direction of movement.  
 
+It moves in the specified direction at the specified speed.  
+
 ````python:example.py
 Drive.stop()
 ````
