@@ -14,7 +14,7 @@ class Servo:
         self.__frequency = frequency
         self.__min_value = min_value
         self.__max_value = max_value
-        self.__value = min_value
+        self.__value = None
         self.start()
         try:
             self.__servo.hardware_PWM(self.__gpio, self.__frequency, 0)
@@ -32,6 +32,7 @@ class Servo:
         return self.__value
     
     def stop(self):
+        self.__value = None
         self.__servo.set_mode(self.__gpio, pigpio.INPUT)
         self.__servo.stop()
     
@@ -45,12 +46,16 @@ class Drive:
         self.__right = Servo(right_gpio, min_value=min_value, max_value=max_value, min_pulse=min_pulse, max_pulse=max_pulse, frequency=frequency)
         self.__min_value = min_value
         self.__max_value = max_value
+        self.__speed = None
+        self.__direction = None
 
     def steering(self, speed=50, direction=0):
         if speed < self.__min_value or speed > self.__max_value:
             raise ValueError("The value of the argument speed is out of range.")
         if direction < -180 or direction > 180:
             raise ValueError("The value of the argument direction is out of range.")
+        self.__speed = speed
+        self.__direction = direction
         if direction >= 0:
             self.__left.write(speed)
             rightValue = (90 - direction) / 90 * speed
@@ -60,6 +65,20 @@ class Drive:
             leftValue = (90 + direction) / 90 * speed
             self.__left.write(leftValue)
 
+    def set_speed(self, speed):
+        self.steering(self, speed=speed, direction=self.__direction)
+
+    def set_direction(self, direction):
+        self.steering(self, speed=self.__speed, direction=direction)
+    
+    def get_speed(self):
+        return self.__speed
+
+    def get_direction(self):
+        return self.__direction
+
     def stop(self):
+        self.__speed = None
+        self.__direction = None
         self.__right.stop()
         self.__left.stop()
