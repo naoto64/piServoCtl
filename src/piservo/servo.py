@@ -66,9 +66,13 @@ class Drive:
             self.__left.write(leftValue)
 
     def set_speed(self, speed):
+        if self.__direction is None:
+            raise Exception("The function steering or start is not being executed.")
         self.steering(self, speed=speed, direction=self.__direction)
 
     def set_direction(self, direction):
+        if self.__speed is None:
+            raise Exception("The function steering or start is not being executed.")
         self.steering(self, speed=self.__speed, direction=direction)
     
     def get_speed(self):
