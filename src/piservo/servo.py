@@ -82,3 +82,7 @@ class Drive:
         self.__direction = None
         self.__right.stop()
         self.__left.stop()
+        
+    def start(self):
+        self.__right.start()
+        self.__left.start()
