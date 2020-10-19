@@ -8,6 +8,25 @@ It utilizes hardware PWM. Therefore, the servo motor can be moved smoothly. Sinc
 
 ````sudo pip3 install piServoCtl````
 
+## Usage
+
+First, start pigpiod (if it is not started).
+
+````shell:command.sh
+sudo pigpiod
+````
+
+### Servo
+
+Control the servo motor using pigpio.  
+Use GPIO that supports hardware PWM.  
+
+### Drive
+
+Create a car with two rotation servo motors.  
+Use GPIO that supports hardware PWM.  
+You can swap the left_gpio and right_gpio to flip the front and back of the car.
+
 ## Demo
 
 ### Servo
@@ -39,19 +58,6 @@ mycar.steering(-50, 0)
 time.sleep(1)
 mycar.stop()
 ````
-
-## Usage
-
-### Servo
-
-Control the servo motor using pigpio.  
-Use GPIO that supports hardware PWM.  
-
-### Drive
-
-Create a car with two rotation servo motors.  
-Use GPIO that supports hardware PWM.  
-You can swap the left_gpio and right_gpio to flip the front and back of the car.
 
 ## Method
 
