@@ -96,15 +96,11 @@ Stop moving.
 
 ## Usage
 
-````python:example.py
-class Servo
-````
+### Servo
 
 Control the servo motor using pigpio.  
 
-````python:example.py
-class Drive
-````
+### Drive
 
 Create a car with two rotation servo motors.  
 Flip the front and back of the car by swapping left_gpio and right_gpio.  
