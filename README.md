@@ -10,6 +10,8 @@ It utilizes hardware PWM. Therefore, the servo motor can be moved smoothly. Sinc
 
 ## Demo
 
+### Servo
+
 ````python:example.py
 from piservo import Servo
 import time
@@ -21,6 +23,21 @@ time.sleep(3)
 myservo.write(0)
 time.sleep(3)
 myservo.stop()
+````
+
+### Drive
+
+````python:example.py
+from piservo import Drive
+import time
+
+mycar = Drive(12, 13)
+
+mycar.steering(50, 45)
+time.sleep(1)
+mycar.steering(-50, 0)
+time.sleep(1)
+mycar.stop()
 ````
 
 ## Usage
