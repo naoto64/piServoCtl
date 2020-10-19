@@ -29,6 +29,19 @@ time.sleep(3)
 myservo.stop()
 ````
 
+## Usage
+
+### Servo
+
+Control the servo motor using pigpio.  
+Use GPIO that supports hardware PWM.  
+
+### Drive
+
+Create a car with two rotation servo motors.  
+Use GPIO that supports hardware PWM.  
+You can swap the left_gpio and right_gpio to flip the front and back of the car.
+
 ## Method
 
 ````python:example.py
@@ -98,19 +111,6 @@ Drive.stop()
 ````
 
 Stop moving.  
-
-## Usage
-
-### Servo
-
-Control the servo motor using pigpio.  
-Use GPIO that supports hardware PWM.  
-
-### Drive
-
-Create a car with two rotation servo motors.  
-Use GPIO that supports hardware PWM.  
-You can swap the left_gpio and right_gpio to flip the front and back of the car.
 
 ## License
 
