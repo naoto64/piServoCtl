@@ -66,7 +66,7 @@ Stops control of the servo motor.
 ````python:example.py
 Drive(left_gpio, right_gpio, min_value=-100, max_value=100, min_pulse=0.5, max_pulse=2.4, frequency=50)
 ````
-left_gpio: GPIO pin number to which the servo motor on the left is connected.  
+left_gpio: GPIO pin number to which the left servo motor is connected.  
 right_gpio: GPIO pin number to which the right servo motor is connected.  
 min_value: Minimum speed of servo motor.  
 max_value: Maximum speed of servo motor.  
