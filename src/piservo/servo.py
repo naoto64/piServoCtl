@@ -49,7 +49,7 @@ class Drive:
         self.__speed = None
         self.__direction = None
 
-    def steering(self, speed=50, direction=0):
+    def steering(self, speed, direction=0):
         if speed < self.__min_value or speed > self.__max_value:
             raise ValueError("The value of the argument speed is out of range.")
         if direction < -180 or direction > 180:
