@@ -44,6 +44,8 @@ You can swap the left_gpio and right_gpio to flip the front and back of the car.
 
 ## Method
 
+### Servo
+
 ````python:example.py
 Servo(gpio, min_value=0, max_value=180, min_pulse=0.5, max_pulse=2.4, frequency=50)
 ````
@@ -82,6 +84,8 @@ Servo.stop()
 ````
 
 Stops control of the servo motor.  
+
+### Drive
 
 ````python:example.py
 Drive(left_gpio, right_gpio, min_value=-100, max_value=100, min_pulse=0.5, max_pulse=2.4, frequency=50)
