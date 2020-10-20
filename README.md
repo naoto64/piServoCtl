@@ -24,7 +24,7 @@ You can control the servo motor with the ````write```` method.
 
 ### Drive
 
-The easiest way is to use ````Drive(left_gpio, right_gpio)```` (left_gpio, right_gpio enter the GPIO pin number). Use GPIO that supports hardware PWM. You can swap the ````left_gpio```` and ````right_gpio```` to flip the front and back of the car.  
+The easiest way is to use ````Drive(left_gpio, right_gpio)```` (````left_gpio````, ````right_gpio```` enter the GPIO pin number). Use GPIO that supports hardware PWM. You can swap the ````left_gpio```` and ````right_gpio```` to flip the front and back of the car.  
 You can control the car with the ````steering```` method.  
 
 ## Demo
