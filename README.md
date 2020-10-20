@@ -11,7 +11,7 @@ In addition, you can easily make an RC car by using two rotation servo motors. U
 
 ## Usage
 
-First, start pigpiod (if it is not started). Then import the module. The module name is "piservo". Please note that it is different from the name at the time of installation.  
+First, start pigpiod (if it is not started). Then import the module. The module name is "piservo". Please note that it is different from the name when it was installed.  
 
 ````shell:command.sh
 sudo pigpiod
