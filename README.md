@@ -11,7 +11,7 @@ In addition, you can easily make an RC car by using two rotation servo motors. U
 
 ## Usage
 
-First, start pigpiod (if it is not started).
+First, start pigpiod (if it is not started). Then import the module. The module name is "piservo". Please note that it is different from the name at the time of installation.  
 
 ````shell:command.sh
 sudo pigpiod
@@ -19,14 +19,13 @@ sudo pigpiod
 
 ### Servo
 
-Control the servo motor using pigpio.  
-Use GPIO that supports hardware PWM.  
+The easiest way is to use ````Servo(gpio)```` (where ````gpio```` is the GPIO pin number). Use GPIO that supports hardware PWM.  
+You can control the servo motor with the ````write```` method.
 
 ### Drive
 
-Create a car with two rotation servo motors.  
-Use GPIO that supports hardware PWM.  
-You can swap the left_gpio and right_gpio to flip the front and back of the car.
+The easiest way is to use ````Drive(left_gpio, right_gpio)```` (left_gpio, right_gpio enter the GPIO pin number). Use GPIO that supports hardware PWM. You can swap the ````left_gpio```` and ````right_gpio```` to flip the front and back of the car.  
+You can control the car with the ````steering```` method.  
 
 ## Demo
 
