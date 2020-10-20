@@ -22,6 +22,8 @@ class Servo:
             raise ValueError("The value of the argument gpio is out of range.")
     
     def write(self, value):
+        if self.__servo is None:
+            raise Exception("The function start is not being executed.")
         if value < self.__min_value or value > self.__max_value:
             raise ValueError("The value of the argument value is out of range.")
         self.__value = value
@@ -35,6 +37,7 @@ class Servo:
         self.__value = None
         self.__servo.set_mode(self.__gpio, pigpio.INPUT)
         self.__servo.stop()
+        self.__servo = None
     
     def start(self):
         self.__servo = pigpio.pi()
