@@ -7,7 +7,9 @@ In addition, you can easily make an RC car by using two rotation servo motors. U
 
 ## Installation
 
-````sudo pip3 install piServoCtl````
+````
+sudo pip3 install piServoCtl
+````
 
 ## Usage
 
