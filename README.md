@@ -33,7 +33,7 @@ You can control the car with the ````steering```` method.
 
 ### Servo
 
-````{.lines-numbers}python:example.py
+````python:example.py
 from piservo import Servo
 import time
 
@@ -48,7 +48,7 @@ myservo.stop()
 
 ### Drive
 
-````{.lines-numbers}python:example.py
+````python:example.py
 from piservo import Drive
 import time
 
